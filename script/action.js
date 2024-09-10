@@ -1,4 +1,4 @@
-$('#section1 figure').click(function () {
+$('#section1 figure .rabit').click(function () {
     alert('HI^ㅡ^')
 })
 
@@ -36,6 +36,15 @@ $('.gnb_box').dblclick(function () {
     $('.gnb_box').fadeOut(500)
 })
 
+$('.close').click(function(){
+    $('.gnb_box').fadeOut(500)
+})
+
+
+
+$('.rabit_box').mouseenter(function(){
+    $('.rabit_box').animate({left:'-100%'})
+})
 $/* ('.gnb_box .gnb li').click(function () {
     let liIndex = $(this).index() //0,1,2,3
     let sectionTop = $('.fullpage > div').eq(liIndex).offset().top;
@@ -97,6 +106,10 @@ $('.f_modal').click(function (e) {
 })
 
 $('#section12 figure').click(function () {
+    $('.f_modal').fadeIn(500)
+})
+ 
+$('#section12 .img_box').click(function () {
     $('.f_modal').fadeIn(500)
 })
 
