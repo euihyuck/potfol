@@ -134,3 +134,4 @@ $(window).mousemove(function (e) {
 $(window).scroll(function () {
     $('.mouse_circle').css({ top: y - circleH / 2 });
 });
+

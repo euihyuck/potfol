@@ -6,6 +6,7 @@
     <title>HEH POT</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
  <!-- Link Swiper's CSS -->
@@ -13,6 +14,7 @@
  
  <link rel="stylesheet" href="css/jquery.fullpage.min.css">
  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
 
 </head>
 <body>
@@ -181,7 +183,7 @@
                         <p>아식스는 일보의 스포츠회사로, <br>기존 웹페이지를 리디자인한 후 퍼블리싱 작업을 하였습니다. </p>
                         <ul class="t3">
                                 <li>TYPE<br>page<br>TOOL<br>PERIOD<br></li>
-                                <li>PC Design<br>Main/Sub <br>Photoshop/HTML/CSS/JS(jQuery)<br>3 day</li>
+                                <li>PC Design<br>Main/Sub*2 <br>Photoshop/HTML/CSS/JS(jQuery)<br>3 day</li>
                         </ul>
                     </li>
     
@@ -227,7 +229,7 @@
                         <p>자체제작<br>개인소개사이트<br>팝업&배너 제작 삽입</p>
                         <ul class="t3">
                                 <li>TYPE<br>page<br>TOOL<br>PERIOD<br></li>
-                                <li>PC Design<br>Main <br>Photoshop/   HTML/CSS/JS(jQuery)<br>3 day</li>
+                                <li>PC Design<br>Main <br>Photoshop/HTML/CSS/JS(jQuery)<br>3 day</li>
                         </ul>
                     </li>
     
@@ -276,16 +278,19 @@
         <div id="section10" >
             <div class="centerbox1400">
                 <h2><img src="images/4.popup.png" alt=""></h2>
+                
     
-              <div class="con3">
-                    <span class="a"><img src="images/i1.png" alt=""></span>
-                    <span class="b"><img src="images/i2.jpg" alt=""></span>
-                    <span class="c"><img src="images/i3.jpg" alt=""></span>
-                    <span class="d"><img src="images/i4.png" alt=""></span>
-                    <span class="e"><img src="images/i5.png" alt=""></span>
-                    <span class="f"><img src="images/i6.png" alt=""></span>
-                    <span class="g"><img src="images/i7.png" alt=""></span>
-                    <span class="h"><img src="images/i8.png" alt=""></span>
+              <div class="con33">
+                  <div class="con3">
+                        <span class="a"><img src="images/i1.png" alt=""></span>
+                        <span class="b"><img src="images/i2.jpg" alt=""></span>
+                        <span class="c"><img src="images/i3.jpg" alt=""></span>
+                        <span class="d"><img src="images/i4.png" alt=""></span>
+                        <span class="e"><img src="images/i5.png" alt=""></span>
+                        <span class="f"><img src="images/i6.png" alt=""></span>
+                        <span class="g"><img src="images/i7.png" alt=""></span>
+                        <span class="h"><img src="images/i8.png" alt=""></span>
+                  </div>
               </div>
             </div>
         </div>
@@ -342,6 +347,8 @@
     </script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+    
      <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <!-- Initialize Swiper -->
@@ -373,7 +380,7 @@
   </script>
  
   <script>
-    gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger, Draggable);
     $(function () {
         gsap.timeline({
                 scrollTrigger:{
@@ -394,7 +401,9 @@
              .fromTo('.con3 span.f',{y:'400%'}, {y:'0'}, 3)
              .fromTo('.con3 span.g',{y:'400%'}, {y:'0'}, 3.5)
              .fromTo('.con3 span.h',{y:'400%'}, {y:'0'}, 4)
-             
+                    
+  
+            
 
 
     })
