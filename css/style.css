@@ -91,7 +91,13 @@ body {background: #f3f2ef;}
 
 #section1 figure:hover {transform: scale(1.3);} */
 .rabit_box {position: absolute; right:0px; top:0px; width: 100px; height: 100px; z-index: 10;}
-.rabit_box .rabit {position: absolute; right:0px; top:0px; z-index: 2;}
+.rabit_box .rabit {position: absolute; right:0px; top:0px; z-index: 2;animation: Rabit 3s infinite;}
+
+@keyframes Rabit {
+  0% {right:-100px}
+  50% {right:0}
+  100% {right: -100px}
+}
 .rabit_box .rabit_arm {width: 120px; height: 50px; position: absolute; right:0px; bottom:0px; border-radius: 50px;background: #dadee7; transition: .3s;}
 .rabit_box:hover .rabit_arm {width: 180px;}
 .rabit_box .rabit_arm img {position: absolute; left: 10px; top: 10px;}

@@ -1,4 +1,4 @@
-$('#section1 figure .rabit').click(function () {
+$('#section1 .rabit_box .rabit').click(function () {
     alert('HI^ㅡ^')
 })
 
