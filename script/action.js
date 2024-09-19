@@ -37,11 +37,28 @@ $('.close').click(function () {
     $('.gnb_box').fadeOut(500)
 })
 
-
-
-$('.rabit_box').mouseenter(function () {
-    $('.rabit_box').animate({ left: '-100%' })
+$('.ui_ux li.monitor').mouseenter(function(){
+    let monitorScreen = $(this).find('.screen').height();
+    let monitorImg = $(this).find(' .screen img').height();
+    if(monitorImg < 400){
+        $(this).find('.screen img').css({transition:'1s'})
+    } else if(monitorImg < 500){
+        $(this).find('.screen img').css({transition:'2s'})
+    } else if(monitorImg < 1000){
+        $(this).find('.screen img').css({transition:'3s'})
+    } else if(monitorImg < 1800){
+        $(this).find('.screen img').css({transition:'4s'})
+    } else {
+        $(this).find('.screen img').css({transition:'5s'})
+    }
+    $(this).find('.screen img').css({top: -monitorImg + monitorScreen})
+}).mouseleave(function(){
+    $(this).find('.screen img').css({top: 0})
 })
+
+// $('.rabit_box').mouseenter(function () {
+//     $('.rabit_box').animate({ left: '-100%' })
+// })
 $/* ('.gnb_box .gnb li').click(function () {
     let liIndex = $(this).index() //0,1,2,3
     let sectionTop = $('.fullpage > div').eq(liIndex).offset().top;
@@ -96,18 +113,18 @@ $('.f_modal').click(function (e) {
     if (e.target == this) {
         $(this).fadeOut(500)
     }
-
-
     $('body').css({ overflow: '' })
 
 })
 
 $('#section12 figure').click(function () {
     $('.f_modal').fadeIn(500)
+    $('body').css({ overflow: 'hidden' })
 })
 
 $('#section12 .img_box').click(function () {
     $('.f_modal').fadeIn(500)
+    $('body').css({ overflow: 'hidden' })
 })
 
 $(document).keydown(function (e) {
@@ -133,5 +150,6 @@ $(window).mousemove(function (e) {
 
 $(window).scroll(function () {
     $('.mouse_circle').css({ top: y - circleH / 2 });
+    $('.f_modal').fadeOut(500)
 });
 
